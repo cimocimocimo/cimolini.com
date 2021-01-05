@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_time_dates",
+  "info": {
+    "name": "dates",
+    "icon": "calendar-alt"
+  },
+  "options": {},
+  "attributes": {
+    "start": {
+      "required": true,
+      "type": "date"
+    },
+    "end": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "objective",
+  "info": {
+    "name": "Objective",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

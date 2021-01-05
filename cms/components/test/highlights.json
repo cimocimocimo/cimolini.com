@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_test_highlights",
+  "info": {
+    "name": "highlights",
+    "icon": "asterisk"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

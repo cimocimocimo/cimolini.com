@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "name": "Experience"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "client": {
+      "type": "string"
+    },
+    "date": {
+      "type": "component",
+      "repeatable": true,
+      "component": "time.dates"
+    },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "test.highlights"
+    }
+  }
+}

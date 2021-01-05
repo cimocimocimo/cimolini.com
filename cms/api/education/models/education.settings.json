@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "educations",
+  "info": {
+    "name": "Education",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "institution": {
+      "type": "string"
+    },
+    "program": {
+      "type": "string"
+    },
+    "credential": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "test.highlights"
+    },
+    "dates": {
+      "type": "component",
+      "repeatable": false,
+      "component": "time.dates"
+    }
+  }
+}
