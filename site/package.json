@@ -16,5 +16,8 @@
     "marked": "^1.2.7",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "devDependencies": {
+    "postcss-preset-env": "^6.7.0"
   }
 }

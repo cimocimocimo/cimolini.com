@@ -8,7 +8,13 @@ module.exports = {
   siteName: 'Aaron Cimolini',
   plugins: [
     {
-      use: "gridsome-plugin-tailwindcss"
+      use: "gridsome-plugin-tailwindcss",
+      options: {
+        tailwindConfig: './tailwind.config.js',
+        presetEnvConfig: {},
+        shouldImport: false,
+        shouldTimeTravel: true,
+      },
     },
     {
       use: '@gridsome/source-strapi',
