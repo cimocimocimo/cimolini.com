@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "cimo-portfolio",
+  "workspaces": [
+    "cms",
+    "site"
+  ],
+  "scripts": {
+    "cms": "yarn workspace cimo-portfolio-cms start",
+    "cms:develop": "yarn workspace cimo-portfolio-cms develop",
+    "cms:build": "yarn workspace cimo-portfolio-cms build",
+    "site": "wait-on http://localhost:1337 && yarn workspace cimo-portfolio-site develop",
+    "site:build": "wait-on http://localhost:1337 && yarn workspace cimo-portfolio-site build",
+    "build": "concurrently --kill-others-on-fail 'yarn cms:build' 'yarn site:build'",
+    "develop": "concurrently --kill-others-on-fail 'yarn cms:develop' 'yarn site'",
+    "start": "concurrently --kill-others-on-fail 'yarn cms' 'yarn site'"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "dependencies": {
+    "wait-on": "^5.2.1"
+  }
+}

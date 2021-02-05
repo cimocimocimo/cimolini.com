@@ -1,6 +1,7 @@
 {
   "name": "cimo-portfolio-site",
   "private": true,
+  "version": "0.1.0",
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
