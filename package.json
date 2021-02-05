@@ -6,11 +6,11 @@
     "site"
   ],
   "scripts": {
-    "cms": "yarn workspace cimo-portfolio-cms start",
-    "cms:develop": "yarn workspace cimo-portfolio-cms develop",
-    "cms:build": "yarn workspace cimo-portfolio-cms build",
-    "site": "wait-on http://localhost:1337 && yarn workspace cimo-portfolio-site develop",
-    "site:build": "wait-on http://localhost:1337 && yarn workspace cimo-portfolio-site build",
+    "cms": "yarn workspace cms start",
+    "cms:develop": "yarn workspace cms develop",
+    "cms:build": "yarn workspace cms build",
+    "site": "wait-on http://localhost:1337 && yarn workspace site develop",
+    "site:build": "wait-on http://localhost:1337 && yarn workspace site build",
     "build": "concurrently --kill-others-on-fail 'yarn cms:build' 'yarn site:build'",
     "develop": "concurrently --kill-others-on-fail 'yarn cms:develop' 'yarn site'",
     "start": "concurrently --kill-others-on-fail 'yarn cms' 'yarn site'"

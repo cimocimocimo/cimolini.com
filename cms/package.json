@@ -1,8 +1,8 @@
 {
-  "name": "cimo-portfolio-cms",
+  "name": "cms",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "CMS for the Cimo Portfolio Site Using Strapi CMS",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",

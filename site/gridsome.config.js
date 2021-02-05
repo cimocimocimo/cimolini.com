@@ -8,6 +8,9 @@ module.exports = {
   siteName: 'Aaron Cimolini',
   plugins: [
     {
+      use: "gridsome-plugin-tailwindcss"
+    },
+    {
       use: '@gridsome/source-strapi',
       options: {
         apiURL: 'http://localhost:1337',

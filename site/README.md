@@ -1,14 +1,9 @@
-# Default starter for Gridsome
+# Gridsome Frontend Site for cimolini.com Portfolio Site
 
-This is the project you get when you run `gridsome create new-project`.
+## Tailwind
 
-### 1. Install Gridsome CLI tool if you don't have
+Uses the [gridsome-plugin-tailwindcss](https://gridsome.org/plugins/gridsome-plugin-tailwindcss) plugin for Gridsome.
 
-`npm install --global @gridsome/cli`
+I was getting PostCSS 8 errors with the default install so I needed to install the packages specified here:
+https://tailwindcss.com/docs/installation#post-css-7-compatibility-build
 
-### 2. Create a Gridsome project
-
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
