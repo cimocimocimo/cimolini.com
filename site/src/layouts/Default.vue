@@ -1,13 +1,13 @@
 <template>
   <div class="layout">
-    <header class="z-50 p-6 leading-none fixed w-screen bg-white flex flex-row justify-between items-center shadow-lg">
-      <g-link class="p-2 font-bold" to="/">{{ $static.metadata.siteName }}</g-link>
+    <header class="z-50 p-3 leading-none fixed w-screen bg-white flex flex-row justify-between items-center shadow-lg">
+      <g-link class="p-3 font-bold" to="/">{{ $static.metadata.siteName }}</g-link>
       <nav class="nav">
-        <g-link class="ml-2 p-2" to="/about/">About</g-link>
-        <g-link class="ml-2 p-2" to="/contact">Contact</g-link>
+        <g-link class="p-3" to="/about/">About</g-link>
+        <g-link class="p-3" to="/contact">Contact</g-link>
       </nav>
     </header>
-    <main class="z-10 pt-28 p-8">
+    <main class="z-10 pt-19 p-3">
       <slot/>
     </main>
     <footer class="z-20">

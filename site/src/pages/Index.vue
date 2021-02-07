@@ -1,7 +1,7 @@
 <template>
   <Layout>
 
-    <address>
+    <address class="bg-white px-3 py-1.5 shadow-md leading-6">
       <div v-html="markdown($page.strapiContactInfo.mailing_address)" />
       <p>
         <a :href="'mailto:' + $page.strapiContactInfo.email">{{ $page.strapiContactInfo.email }}</a><br>
