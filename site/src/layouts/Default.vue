@@ -1,15 +1,18 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
+    <header class="z-50 p-6 leading-none fixed w-screen bg-white flex flex-row justify-between items-center shadow-lg">
+      <g-link class="p-2 font-bold" to="/">{{ $static.metadata.siteName }}</g-link>
       <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
+        <g-link class="ml-2 p-2" to="/about/">About</g-link>
+        <g-link class="ml-2 p-2" to="/contact">Contact</g-link>
       </nav>
     </header>
-    <slot/>
+    <main class="z-10 pt-28 p-8">
+      <slot/>
+    </main>
+    <footer class="z-20">
+      Footer
+    </footer>
   </div>
 </template>
 
@@ -21,26 +24,8 @@ query {
 }
 </static-query>
 
-<style>
-body {
+<script>
+export default {
+  name: 'Layout',
 }
-
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
-</style>
+</script>
