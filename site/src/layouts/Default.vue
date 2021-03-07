@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <header class="z-50 p-3 leading-none fixed w-screen bg-white flex flex-row justify-between items-center shadow-lg">
+    <header class="layout__header">
       <g-link class="p-3 font-bold" to="/">{{ $static.metadata.siteName }}</g-link>
       <nav class="nav">
         <g-link class="p-3" to="/about/">About</g-link>

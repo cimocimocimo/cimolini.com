@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.layout__header {
+  @apply z-50 p-3 leading-none fixed w-screen bg-white flex flex-row justify-between items-center shadow-lg;
+}
