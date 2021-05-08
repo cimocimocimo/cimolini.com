@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "experiences",
   "info": {
-    "name": "Experience"
+    "name": "Experience",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -16,18 +17,20 @@
     "text": {
       "type": "richtext"
     },
-    "client": {
-      "type": "string"
-    },
     "date": {
       "type": "component",
-      "repeatable": true,
-      "component": "time.dates"
+      "repeatable": false,
+      "component": "time.dates",
+      "max": 1
     },
     "highlights": {
       "type": "component",
       "repeatable": true,
       "component": "test.highlights"
+    },
+    "client": {
+      "model": "client",
+      "via": "experiences"
     }
   }
 }

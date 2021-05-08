@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizations",
+  "info": {
+    "name": "Organizations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "experiences": {
+      "via": "client",
+      "collection": "experience"
+    },
+    "Website": {
+      "type": "string",
+      "unique": true
+    },
+    "Relationship": {
+      "type": "enumeration",
+      "enum": [
+        "Client",
+        "Employer"
+      ]
+    }
+  }
+}

@@ -2,12 +2,13 @@
   "collectionName": "components_test_highlights",
   "info": {
     "name": "highlights",
-    "icon": "asterisk"
+    "icon": "asterisk",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "text": {
-      "type": "string"
+      "type": "text"
     }
   }
 }
