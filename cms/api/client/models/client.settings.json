@@ -20,8 +20,8 @@
       "type": "text"
     },
     "experiences": {
-      "via": "client",
-      "collection": "experience"
+      "collection": "experience",
+      "via": "client"
     },
     "Website": {
       "type": "string",

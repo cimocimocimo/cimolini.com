@@ -29,8 +29,8 @@
       "component": "test.highlights"
     },
     "client": {
-      "model": "client",
-      "via": "experiences"
+      "via": "experiences",
+      "model": "client"
     }
   }
 }

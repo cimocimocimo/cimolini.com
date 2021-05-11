@@ -72,3 +72,21 @@ Strapi stores rich text as markdown in the database. Gridsome only outputs the r
 https://github.com/markedjs/marked
 
 Using that in a vue method to format the text as html.
+
+## Graph QL
+
+Needed to get graphql layer working in spacemacs. Depends on [graphql-mode](https://github.com/davazp/graphql-mode) for emacs. Docs are rather sparse. Required that we create a .graphqlconfig file in the root of the project directory (./site/ dir). I needed to look through the Lisp code to determine the correct syntax for the JSON.
+
+This should be a working file for Gridsome.
+```json
+{
+    "schema": "http://localhost:8080/___graphql",
+    "extensions": {
+        "endpoints": {
+            "default": {
+                "url": "http://localhost:8080/___graphql"
+            }
+        }
+    }
+}
+```

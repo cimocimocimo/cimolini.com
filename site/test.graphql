@@ -1,0 +1,24 @@
+query {
+  allStrapiExperience {
+    edges {
+      node {
+        id
+        title
+        text
+        date {
+          start
+          end
+        }
+        highlights {
+          text
+        }
+        client {
+          id
+          Name
+          Description
+          Website
+        }
+      }
+    }
+  }
+}

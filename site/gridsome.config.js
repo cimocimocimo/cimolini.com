@@ -8,22 +8,25 @@ module.exports = {
   siteName: 'Aaron Cimolini',
   plugins: [
     {
-      use: "gridsome-plugin-tailwindcss",
-      options: {
-        tailwindConfig: './tailwind.config.js',
-        presetEnvConfig: {},
-        shouldImport: false,
-        shouldTimeTravel: true,
-      },
-    },
-    {
       use: '@gridsome/source-strapi',
       options: {
         apiURL: 'http://localhost:1337',
         queryLimit: 1000, // Defaults to 100
-        contentTypes: ['education', 'experience', 'objective', 'qualification'],
+        contentTypes: [
+          'education',
+          'experience',
+          'objective',
+          'clients',
+          'qualification',
+        ],
         singleTypes: ['contact-info'],
-      },
-    },
-  ],
+        // Possibility to login with a Strapi user,
+        // when content types are not publicly available (optional).
+        loginData: {
+          identifier: '',
+          password: ''
+        }
+      }
+    }
+  ]
 }

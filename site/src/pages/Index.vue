@@ -8,6 +8,8 @@
         <a :href="'tel:+1' + $page.strapiContactInfo.phone">{{ formatPhone($page.strapiContactInfo.phone) }}</a><br>
       </p>
     </address>
+    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
+    <g-image alt="Example image" src="~/favicon.png" width="135" />
 
     <section>
       <h2>Objective</h2>
@@ -19,26 +21,27 @@
       <p>Word salad of technologies and general qualifications. Title/abbreviation with a very short description. Link to applicable experience/education?</p>
     </section>
 
-    <section>
-      <h2>Education</h2>
-      <div v-for="edu in $page.allStrapiEducation.edges" :key="edu.node.id">
-        {{ edu.node.institution }}<br>
-        {{ edu.node.program }}<br>
-        {{ edu.node.credential }}<br>
-        {{ edu.node.text }}<br>
-
-        <ul>
-          <li v-for="hl in edu.node.highlights" :key="hl.id">
-            {{ hl.text }}
+    <div>
+      <div v-for="{ node } in $page.experience.edges" :key="node.id">
+        <h2 v-if="node.client">
+          <a v-if="node.client.Website" :href="node.client.Website">
+            {{ node.client.Name }}
+          </a>
+          <span v-else>
+            {{ node.client.Name }}
+          </span>
+        </h2>
+        <div v-if="node.client">{{ node.client.Website }}</div>
+        <h2>{{ node.title }}</h2>
+        <p>{{ node.text }}</p>
+        <p v-if="node.date">{{ node.date.start }} - {{ node.date.end }}</p>
+        <ul v-if="node.highlights">
+          <li v-for="({ text }, index) in node.highlights" :key="index">
+            {{ text }}
           </li>
         </ul>
-
-        <div>
-          {{ edu.node.dates.start }} - {{ edu.node.dates.end }}
-        </div>
       </div>
-
-    </section>
+    </div>
 
     <section>
       <h2>Experience</h2>
@@ -49,6 +52,10 @@
       <h2>References</h2>
       <p>Some content.</p>
     </section>
+    <p class="home-links">
+      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
+      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
+    </p>
 
   </Layout>
 </template>
@@ -78,6 +85,9 @@ export default {
 </script>
 
 <style>
+.home-links a {
+  margin-right: 1rem;
+}
 </style>
 
 <page-query>
@@ -87,22 +97,24 @@ export default {
   email
   phone
   }
-  allStrapiEducation {
+  experience: allStrapiExperience {
   edges {
   node {
   id
-  institution
-  program
-  credential
+  title
   text
-  highlights {
-  id
-  text
-  }
-  dates {
-  id
+  date {
   start
   end
+  }
+  highlights {
+  text
+  }
+  client {
+  id
+  Name
+  Description
+  Website
   }
   }
   }

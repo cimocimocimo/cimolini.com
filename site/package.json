@@ -1,23 +1,13 @@
 {
   "name": "site",
   "private": true,
-  "version": "0.1.0",
   "scripts": {
-    "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "build": "gridsome build"
   },
   "dependencies": {
     "@gridsome/source-strapi": "^0.2.0",
-    "@tailwindcss/postcss7-compat": "^2.0.2",
-    "autoprefixer": "^9",
-    "gridsome": "^0.7.0",
-    "gridsome-plugin-tailwindcss": "^4.1.1",
-    "marked": "^1.2.7",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
-  },
-  "devDependencies": {
-    "postcss-preset-env": "^6.7.0"
+    "gridsome": "^0.7.0"
   }
 }
