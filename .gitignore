@@ -1,5 +1,3 @@
-/node_modules/
-/yarn-error.log
-
-# Emacs
-.#*
+.direnv
+.turbo
+node_modules
