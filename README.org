@@ -1,0 +1,36 @@
+#+title: Cimolini.com website
+
+This flake provides the development environment and build tools needed for cimolini.com. It is a monorepo that is built with [[https://github.com/vercel/turborepo][Turborepo]]. There are two main apps, a [[https://github.com/payloadcms/payload][Payload]] CMS and a static site generator powered with [[https://github.com/sveltejs/kit][SvelteKit]].
+
+* Flake.nix
+This provides the latest nodejs environment as well as pnpm and turborepo.
+
+** Turborepo
+
+This is provided by the [[https://github.com/alexghr/turborepo.nix][turborepo.nix]] package. It provides a flake of the patched version of the =turbo= variant that works with Nix. To update to the latest =turbo= version run:
+
+#+begin_src sh
+bash ./scripts/generate-npm-packages.bash > npm-packages.gen.nix
+#+end_src
+
+* Project Overview
+This is a repository for building and deploying my portfolio website and blog. It will be built locally and deployed to Cloudflare Pages. All content is going to be stored in a SQLite DB and static resources are going to be stored either in a static directory or as media in Payload CMS.
+
+* TODOs
+
+** DONE Use Gemini CLI to create the payload config for blog entries.
+
+** TODO Determine how to generate a static site that could be deployed to Cloudflare Pages in Svelte
+This should end up as a command at the root of the project that I can run to build and deploy a production version of the site to Cloudflare pages. After it has run I should see a "hello world" page at the url https://cimolini.com
+*** Looks like we just need to set prerender to true at the root of the site.
+Needed =ssr = true= as well.
+*** Now for deployment to cloudflare
+Installed wrangler and we're good to go.
+*** Now to point the domain there.
+Configured the domain to point to it but the deployment isn't showing at the site. I think I need to merge back to the master branch and then deploy that.
+
+
+** TODO Determine how to connect SvelteKit to Payload
+Build a static version of the site that has data from Payload displayed at the root of the site. Test by building it and confirming the data is there and then changing value in payload, rebuild the site, and confirm the built site reflects the change.
+*** Fetching the posts directly through local API.
+This is fine since we're just building a static site.

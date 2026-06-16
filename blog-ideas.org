@@ -1,0 +1,17 @@
+#+title: Blog Ideas
+
+[[https://gwern.net/doc/economics/automation/1990-david.pdf][The Dynamo and the Computer: An Historical Perspective
+on the Modern Productivity Paradox]] - an interesting paper on how technological advances don't lead to productivity gains after early adoption. The electric motor was just a replacement for the steam engine at first, but later they were used to power individual factory machines in a way that allowed them to move the machines to best suite the production line rather than to suit the access to the central drive shafts from the plant's steam engine.
+
+InfoTech and such also didn't really see massive gains initially because people were just using them to perform standard paper based activities on computers. Some things were better but the processes largely stayed the same till the internet connected everything.
+
+Also a mention of how information can overload us through it's superabundance. This means we have to perform extra work to filter it out. This cognitive overhead has a cost.
+
+Perhaps the adoption of AI will follow a similar path and allow us to better filter out information that we are not interested in to find patterns and meaning we are. AI could also be used nefariously to prevent some kinds of filtering of ideas to either ensure that ideas are disseminated or restricted. We are already seeing this in LLM's "safety protocols" that prevent people from researching "dangerous" topics.
+
+Anthropic is restricting some kinds of research using it's latest model to restrict the development of competing models. Restrict info on molectular biology and other topics they deem sensititive.
+
+
+* Post on what Pliny is doing with obliterating safety protocols on local models.
+https://huggingface.co/OBLITERATUS/Gemma-4-12B-OBLITERATED
+This would be good but also hard since I know fuck all about it. Still if I can figure it out it would be a good topic.

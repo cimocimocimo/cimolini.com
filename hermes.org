@@ -1,0 +1,120 @@
+* 🚀 Personal Portfolio Website Blueprint
+:PROPERTIES:
+:CUSTOM_ID: personal-portfolio-website-blueprint
+:END:
+
+Based on your goal of creating a personal portfolio, the structure needs
+to be clean, experience-first, and conversion-oriented (meaning it
+should guide visitors toward contacting you or viewing your best work).
+This plan outlines the Site Map, Key Content, and Design Directives.
+
+** 🗺️ I. Site Map (Navigation Structure)
+:PROPERTIES:
+:CUSTOM_ID: i.-site-map-navigation-structure
+:END:
+A modern portfolio should be shallow in depth---users should reach any
+crucial page in 2-3 clicks maximum.
+
+| Page / View              | URL Slug | Purpose                                                       | Priority |
+|--------------------------+----------+---------------------------------------------------------------+----------|
+| *Home*                     | =/=        | The immediate hook. Must grab attention and direct traffic.   | *High*     |
+| *Work / Portfolio*         | =/work=    | The main showcase of projects. The "proof."                   | *High*     |
+| *About*                    | =/about=   | Who you are beyond the code/designs. Personality layer.       | *High*     |
+| *Contact*                  | =/contact= | The conversion point. How to hire you.                        | *High*     |
+| *(Optional) Blog/Thoughts* | =/blog=    | Demonstrates ongoing thought leadership and skills longevity. | Medium   |
+
+** 🖋️ II. Content Deep Dive (What Goes Where)
+:PROPERTIES:
+:CUSTOM_ID: ii.-content-deep-dive-what-goes-where
+:END:
+*** 🏠 1. Home Page (The Elevator Pitch)
+:PROPERTIES:
+:CUSTOM_ID: home-page-the-elevator-pitch
+:END:
+This page must answer: /Who are you, and what does work on them?/ within
+5 seconds.
+
+- *Hero Section:*
+  - *Headline:* Your core value proposition (e.g., "Building intuitive
+    SaaS platforms using React and Node.").
+  - *Sub-Headline:* A bit more detail (e.g., "I translate complex
+    business problems into elegant, scalable digital solutions.").
+  - *Primary CTA:* A prominent button: "View My Work" (Links to
+    =/work=).
+  - *Secondary CTA:* "Get In Touch" (Links to =/contact=).
+- *Featured Work (Showcase):* Display 3-4 of your /absolute best/
+  projects immediately. Use high-quality thumbnails.
+- *Skills Snapshot:* A visual bar or list of your 3-5 main tech stacks
+  (e.g., React, Python, Figma).
+- *Call to Action Footer:* A final prompt to view the full portfolio or
+  contact you.
+
+*** 🛠️ 2. Work / Portfolio Page (The Gallery)
+:PROPERTIES:
+:CUSTOM_ID: work-portfolio-page-the-gallery
+:END:
+This is an organized grid view of all your case studies.
+
+- *Filtering/Sorting:* Allow filtering by type (e.g., "Web App," "Mobile
+  Concept," "Branding") or technology.
+- *Project Cards:* Each card must show:
+  - Project Name
+  - A captivating visual/screenshot.
+  - A one-sentence description/tagline.
+  - Key technologies used (e.g., React, Figma).
+  - CTA: "View Case Study."
+
+**** 🗂️ Project Detail Page (The Case Study)
+:PROPERTIES:
+:CUSTOM_ID: project-detail-page-the-case-study
+:END:
+/This is the most critical page./ Don't just show the finished product;
+show your /thinking/. 1. *Overview:* Client/Project Goal, Your Role,
+Duration, Tech Stack. 2. *The Problem:* What was the challenge?
+(Demonstrates empathy). 3. *The Process:* Show the journey (Sketches
+\(\rightarrow\) Wireframes \(\rightarrow\) High-Fi Mockups
+\(\rightarrow\) Final Product). 4. *The Solution:* Large, interactive
+presentation of the final UI/UX. 5. *Learnings/Impact:* What did you
+learn? What measurable impact did it have (if possible)? 6. *CTA:* Link
+back to your portfolio or a "Let's Build Something" contact form.
+
+*** 👤 3. About Page (The Human Connection)
+:PROPERTIES:
+:CUSTOM_ID: about-page-the-human-connection
+:END:
+People hire people, not just code. * *Professional Headshot:* High
+quality and approachable. * *Narrative Bio:* Write in the first person.
+Go beyond job titles. Talk about /why/ you code/design. (e.g., "I'm
+passionate about simplifying complexity...", not "I know React."). *
+*Skills Matrix:* Detail proficiency levels (Beginner, Proficient,
+Expert) for hard skills (Languages, Tools). * *Experience Timeline:* A
+clean, visual representation of your career progression. * *Interests:*
+A brief section to humanize (e.g., "When I'm not coding, I'm
+usually...")
+
+*** 📞 4. Contact Page (The Conversion Funnel)
+:PROPERTIES:
+:CUSTOM_ID: contact-page-the-conversion-funnel
+:END:
+Make it frictionless. * *Concise Opening:* Reiterate your value in the
+text above the form. * *Contact Form:* Keep required fields minimal
+(Name, Email, Message). Crucially, add a field like *"How can I help
+you?"* (Dropdown: Job Inquiry, Collaboration, General Question). *
+*Direct Links:* Include icons for LinkedIn, GitHub, and optional email
+direct link.
+
+** ✨ III. Design Directives (Aesthetic Recommendations)
+:PROPERTIES:
+:CUSTOM_ID: iii.-design-directives-aesthetic-recommendations
+:END:
+- *Aesthetic Vibe:* Modern, minimal, and professional. Let the work
+  speak for itself.
+- *Color Palette:* Use a neutral base (White, Charcoal Grey, Deep Blue)
+  paired with /one/ vibrant accent color that you associate with your
+  personal brand.
+- *Typography:* Use strong, legible fonts. Choose one clean, modern
+  sans-serif for body text, and a more impactful secondary font for
+  headlines.
+- *Interactivity:* Implement subtle animations on hover (buttons,
+  project cards). Use smooth scrolling transitions between sections. *Do
+  not let the user wait for loading times.*
