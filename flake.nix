@@ -7,11 +7,13 @@
     url = "github:numtide/flake-utils";
     inputs.systems.follows = "systems";
   };
+  inputs.wrangler.url = "github:emrldnix/wrangler";
 
   outputs =
     {
       nixpkgs,
       flake-utils,
+      wrangler,
       ...
     }:
     flake-utils.lib.eachDefaultSystem (
@@ -25,6 +27,7 @@
             bashInteractive
             nodejs
             jq
+            wrangler.packages.${system}.wrangler
           ];
           shellHook = ''
             # Dynamically add the local node_modules/.bin directory to your PATH
