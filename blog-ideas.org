@@ -15,3 +15,9 @@ Anthropic is restricting some kinds of research using it's latest model to restr
 * Post on what Pliny is doing with obliterating safety protocols on local models.
 https://huggingface.co/OBLITERATUS/Gemma-4-12B-OBLITERATED
 This would be good but also hard since I know fuck all about it. Still if I can figure it out it would be a good topic.
+
+
+* AI/ML for robotics and world models in general.
+https://qwen.ai/blog?id=qwen-robotsuite
+
+This is going to be the biggest win for AI, LLMs are a fun interface but robots understanding, navigating, and manipulating the world around them is going to be the game changer.
