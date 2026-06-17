@@ -28,6 +28,9 @@ Needed =ssr = true= as well.
 Installed wrangler and we're good to go.
 *** Now to point the domain there.
 Configured the domain to point to it but the deployment isn't showing at the site. I think I need to merge back to the master branch and then deploy that.
+That worked. We're live.
+*** TODO add publish command to the repo.
+low priority - just use npm run dev in the cms and then biuld in web.
 
 
 ** TODO Determine how to connect SvelteKit to Payload
