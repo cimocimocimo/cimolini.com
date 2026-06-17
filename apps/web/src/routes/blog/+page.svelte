@@ -2,7 +2,7 @@
 	let { data } = $props<{ data: import('./$types').PageData }>();
 </script>
 
-<h1>Blog</h1>
+<h2>Blog</h2>
 
 {#if data.posts && data.posts.length > 0}
 	<ul>

@@ -10,7 +10,7 @@
 	<a href="/blog">&larr; Back to Blog</a>
 </p>
 
-<h1>{data.post.title}</h1>
+<h2>{data.post.title}</h2>
 
 {#if data.post.publishedDate}
 	<p>{new Date(data.post.publishedDate).toLocaleDateString()}</p>
