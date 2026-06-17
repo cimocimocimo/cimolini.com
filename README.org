@@ -19,8 +19,7 @@ This is a repository for building and deploying my portfolio website and blog. I
 * TODOs
 
 ** DONE Use Gemini CLI to create the payload config for blog entries.
-
-** TODO Determine how to generate a static site that could be deployed to Cloudflare Pages in Svelte
+** HOLD Determine how to generate a static site that could be deployed to Cloudflare Pages in Svelte
 This should end up as a command at the root of the project that I can run to build and deploy a production version of the site to Cloudflare pages. After it has run I should see a "hello world" page at the url https://cimolini.com
 *** Looks like we just need to set prerender to true at the root of the site.
 Needed =ssr = true= as well.
@@ -32,13 +31,12 @@ That worked. We're live.
 *** TODO add publish command to the repo.
 low priority - just use npm run dev in the cms and then biuld in web.
 
-
-** TODO Determine how to connect SvelteKit to Payload
+** DONE Determine how to connect SvelteKit to Payload
 Build a static version of the site that has data from Payload displayed at the root of the site. Test by building it and confirming the data is there and then changing value in payload, rebuild the site, and confirm the built site reflects the change.
 *** Fetching the posts directly through local API.
 This is fine since we're just building a static site.
 
-** TODO Add a sitemap.xml component that creates a static sitemap.xml file.
+** HOLD Add a sitemap.xml component that creates a static sitemap.xml file.
 Lower priority for now.
 
 This could involve dynamically generating the links from pages in the CMS or be as simple as scanning the build dir and building it from that.
