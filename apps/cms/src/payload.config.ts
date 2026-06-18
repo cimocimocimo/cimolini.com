@@ -9,6 +9,7 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Posts } from './collections/Posts'
 import { Categories } from './collections/Categories'
+import { CVEvents } from './collections/CVEvents'
 import { Site } from './globals/Site/config'
 
 const filename = fileURLToPath(import.meta.url)
@@ -21,7 +22,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Posts, Categories],
+  collections: [Users, Media, Posts, Categories, CVEvents],
   db: sqliteAdapter({
     client: {
       url: process.env.DATABASE_URL || 'file:cms.db',
