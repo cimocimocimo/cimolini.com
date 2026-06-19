@@ -18,6 +18,96 @@ This is a repository for building and deploying my portfolio website and blog. I
 
 * TODOs
 
+
+
+** TODO Add CV component to Payload CMS.
+
+Display all experience and education in a linear format. Only group experience by employer when it is sequential. This should allow for Freelance experience to be grouped when I'm between employers or major contracts.
+
+This should also allow some kind of dynamic filtering of experience. A user should be able to select techs to filter by and the timeline should collapse all the non-relevant experience. I could add a natural language filter that uses an LLM to do this [stretch goal].
+
+Include links in the experience to either the project described, a blog post about it, or the code on GH.
+
+*** Data Types
+**** Primitives
+
+***** Actions
+Happen at a specific time, events.
+Some change effected.
+ * Gain employment
+ * Complete project
+ * Start schooling
+ * Graduate
+ * Receive promotion
+Describes the results of my actions:
+ * Completed a project for a client
+ * Earned a certification
+ * Applied for a job and got it
+ * Resigned from a job
+ * Learned a new tech and applied it at work
+Associated with some Entity
+Actions can change states. States to be defined as relations between Entities.
+
+***** Entities
+These are the people, companies, institutions that I perform actions for:
+ * College
+ * Department
+ * Startup
+ * Individual
+I am also an Entity
+Entities may be related in some way: I may be a student of a Univeristy, relationship: attending. Employee of a Business: employed by, employs.
+They are defined by their relationship with myself and other Entities.
+
+***** Attributes
+These describe Actions and Entities.
+
+**** General
+***** Project
+Many to One relation with another Parent Entity, school, client, or employer.
+***** Employer
+Many to One relation with myself as an Entity
+State relations: current employer, past employer, null relation is never employed by.
+***** Position
+One to Many relation with Employers and Clients.
+State relations: current position, past position. null, position never held.
+***** Client
+Many to One relation with my personal company.
+State relations: current client, past client.
+***** School/College/University
+Many to One relation with myself as an Entity
+State relations: currently attending, attended (graduated/completed), attended (did not complete).
+***** Experience
+Similar to a project but does not have a start or end event.
+Many to One relationship with a Client, Employer.
+State relations: null, experience gained
+
+**** Link
+text
+uri
+
+#+begin_src typescript
+import { Field } from 'payload';
+
+const uriField: Field = {
+  name: 'uri',
+  type: 'text', // Base field type
+  label: 'URI',
+  required: true,
+  validate: (value) => {
+    if (value) {
+      try {
+        new URL(value); // Basic JS URL validation
+        return true;
+      } catch (error) {
+        return 'Must be a valid URI (e.g., https://example.com)';
+      }
+    }
+    return true;
+  }
+};
+#+end_src
+
+
 ** DONE Use Gemini CLI to create the payload config for blog entries.
 ** HOLD Determine how to generate a static site that could be deployed to Cloudflare Pages in Svelte
 This should end up as a command at the root of the project that I can run to build and deploy a production version of the site to Cloudflare pages. After it has run I should see a "hello world" page at the url https://cimolini.com
