@@ -17,9 +17,6 @@ bash ./scripts/generate-npm-packages.bash > npm-packages.gen.nix
 This is a repository for building and deploying my portfolio website and blog. It will be built locally and deployed to Cloudflare Pages. All content is going to be stored in a SQLite DB and static resources are going to be stored either in a static directory or as media in Payload CMS.
 
 * TODOs
-
-
-
 ** TODO Add CV component to Payload CMS.
 
 Display all experience and education in a linear format. Only group experience by employer when it is sequential. This should allow for Freelance experience to be grouped when I'm between employers or major contracts.
@@ -30,7 +27,6 @@ Include links in the experience to either the project described, a blog post abo
 
 *** Data Types
 **** Primitives
-
 ***** Actions
 Happen at a specific time, events.
 Some change effected.
@@ -107,7 +103,14 @@ const uriField: Field = {
 };
 #+end_src
 
+*** View layer
+How is this all going to look?
+It should have a similar structure to a CV, but include elements of a technical resume (e.g. technology used).
+CVs have sections for related content, education, publications, etc. but I would like to have mine in chronological order. So sequential items that are related should be grouped, experience for a job would be one group. Free-lance work could have a larger group that encompasses some longer term contracs, like WSS.
 
+** TODO For filtering the CMS it would be neet to integrate Voice to text somehow.
+Possibly for an interface to a chatbot.
+https://jax-js.com/whisper
 ** DONE Use Gemini CLI to create the payload config for blog entries.
 ** HOLD Determine how to generate a static site that could be deployed to Cloudflare Pages in Svelte
 This should end up as a command at the root of the project that I can run to build and deploy a production version of the site to Cloudflare pages. After it has run I should see a "hello world" page at the url https://cimolini.com

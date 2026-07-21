@@ -14,6 +14,9 @@ const config = {
 				...config,
 				include: [...config.include, '../drizzle.config.ts']
 			})
+		},
+		alias: {
+			'@/*': './src/lib/*'
 		}
 	},
 	preprocess: [mdsvex({ extensions: ['.svx', '.md'] })],
