@@ -27,7 +27,7 @@ Include links in the experience to either the project described, a blog post abo
 
 *** Data Types
 **** Primitives
-***** Actions
+***** Actions/Events
 Happen at a specific time, events.
 Some change effected.
  * Gain employment
@@ -59,7 +59,7 @@ These describe Actions and Entities.
 
 **** General
 ***** Project
-Many to One relation with another Parent Entity, school, client, or employer.
+Many to One relation with another Parent Entity, school, client, or employer. May also have a relation with a position as well for a project completed as a specific job title.
 ***** Employer
 Many to One relation with myself as an Entity
 State relations: current employer, past employer, null relation is never employed by.
@@ -70,10 +70,10 @@ State relations: current position, past position. null, position never held.
 Many to One relation with my personal company.
 State relations: current client, past client.
 ***** School/College/University
-Many to One relation with myself as an Entity
+Many to One relation with myself as an Entity.
 State relations: currently attending, attended (graduated/completed), attended (did not complete).
 ***** Experience
-Similar to a project but does not have a start or end event.
+Similar to a project but does not have a start or end event. Just a single event when it's gained.
 Many to One relationship with a Client, Employer.
 State relations: null, experience gained
 
@@ -103,12 +103,20 @@ const uriField: Field = {
 };
 #+end_src
 
-*** View layer
+*** View Layers
 How is this all going to look?
 It should have a similar structure to a CV, but include elements of a technical resume (e.g. technology used).
 CVs have sections for related content, education, publications, etc. but I would like to have mine in chronological order. So sequential items that are related should be grouped, experience for a job would be one group. Free-lance work could have a larger group that encompasses some longer term contracs, like WSS.
 
-** TODO For filtering the CMS it would be neet to integrate Voice to text somehow.
+**** Chronological
+This is the default view and provides an overview of all my experience. General CV layout. This should show more details for the best work and allow a user to expand sections to see more. From the expanded sections they can click into the Detail view.
+
+**** Detail/Entity
+This provides all info related to a specific entity. A project would describe the project and show the client it was done for. Experience gained would be listed, tech used, etc. For a position I may have worked as a web dev for multiple clients so this would list them as well as all the top experience gained in those various jobs/contracts. Employer/Client would have description of them as well as the positions held and the experience gained.
+
+Relations to other entities should be shown as clickable links to their detail views. as well as links back to the Chronological overview.
+
+** TODO For filtering the CMS it would be neat to integrate Voice to text somehow.
 Possibly for an interface to a chatbot.
 https://jax-js.com/whisper
 ** DONE Use Gemini CLI to create the payload config for blog entries.
