@@ -104,7 +104,6 @@ const uriField: Field = {
 #+end_src
 
 *** View Layers
-How is this all going to look?
 It should have a similar structure to a CV, but include elements of a technical resume (e.g. technology used).
 CVs have sections for related content, education, publications, etc. but I would like to have mine in chronological order. So sequential items that are related should be grouped, experience for a job would be one group. Free-lance work could have a larger group that encompasses some longer term contracs, like WSS.
 
@@ -115,6 +114,47 @@ This is the default view and provides an overview of all my experience. General 
 This provides all info related to a specific entity. A project would describe the project and show the client it was done for. Experience gained would be listed, tech used, etc. For a position I may have worked as a web dev for multiple clients so this would list them as well as all the top experience gained in those various jobs/contracts. Employer/Client would have description of them as well as the positions held and the experience gained.
 
 Relations to other entities should be shown as clickable links to their detail views. as well as links back to the Chronological overview.
+
+**** Visual Elements
+These will become components in Svelte to build the page.
+
+***** The Timeline
+Shows my career progression, earliest at the bottom, recent at the top. Show my current job or project at the top.
+dates
+progression
+Load the events/actions from the DB and add/update components in chronological order. Adding new experience and jobs as time moves to now.
+****** TODO Implement CV Timeline
+CMS Events - differing types, some start some end. Some are single points in time. They will have some relation to an Entity such as an employer, position, experience, etc. This will require some custom interface in Payload CMS.
+SvelteKit will load the data from the CMS and pass the events to the FE.
+FE Svelte will progressively add and update components needed to show the timeline.
+
+***** Components/Elements/Entities/Events
+
+These are the content elements that will fill the page. Let's start with components that I see on my resume.
+
+Sections for places I've worked or attended. I'll need sub-sections for clients and projects as well. I may need to show overlapping sections for when I was working for one large client and still maintaining other clients. Essentially this is going to be for some of my larger clients while I'm keeping Cimo WD&D going. Let's start with just independent sections for now, work in the overlap later.
+- CV Section
+
+Employer/Client - Places I've worked or people/companies I've worked for
+Job - What I was doing for those employers/clients.
+Experience
+position/title
+
+projects
+
+Education - Things I've learned, the schools I attended. Self-taught knowledge?
+
+technologies
+skills
+highlighted experience
+acheivements/metrics
+
+***** Design Themes
+photo - recent headshot
+interactive - the interactivity should add to the UX, not impede it. Show that I can build a snappy and fun interface that feels natural to use.
+blueprints - I like the idea of using thin light lines in the design like a blueprint or a wireframe. Not directly referenced but the interface should feel a little more like a functional wireframe than a polished fancy design.
+computer interface/code - add some elements of a computer interface, things like terminal text or perhaps a command line. Expose some of the JS console messages in the interface as JSON requests are made and events are triggered. Show the code and events behind the interface.
+
 
 ** TODO For filtering the CMS it would be neat to integrate Voice to text somehow.
 Possibly for an interface to a chatbot.
