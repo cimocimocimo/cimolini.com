@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { class: className, children, ...restProps } = $props();
+	let { class: className = '', children, ...restProps } = $props();
 	const Tags = {
 		li: 'li',
 		span: 'span',

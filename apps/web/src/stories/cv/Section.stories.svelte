@@ -6,13 +6,10 @@
 		title: 'Section',
 		component: Section,
 		tags: ['autodocs'],
-		// args: {
-		// 			class: ['heythere', 'gooodlookin']
-		// 		},
-		argTypes: {
-			children: { control: 'text' }
+		args: {
+			class: ['some-class', 'some-other-class']
 		}
 	});
 </script>
 
-<Story name="Section" args={{ children: 'can I edit this???' }} />
+<Story name="Section">Some experience in the slot.</Story>
