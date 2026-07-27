@@ -9,7 +9,7 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Posts } from './collections/Posts'
 import { Categories } from './collections/Categories'
-import { CVEvents } from './collections/CVEvents'
+import { Events as CVEvents } from './collections/cv/Events'
 import { Site } from './globals/Site/config'
 
 const filename = fileURLToPath(import.meta.url)
@@ -17,6 +17,14 @@ const dirname = path.dirname(filename)
 
 export default buildConfig({
   admin: {
+    autoLogin:
+      process.env.NODE_ENV === 'development'
+        ? {
+            email: 'aaron@cimolini.com',
+            password: 'password',
+            prefillOnly: false,
+          }
+        : false,
     user: Users.slug,
     importMap: {
       baseDir: path.resolve(dirname),

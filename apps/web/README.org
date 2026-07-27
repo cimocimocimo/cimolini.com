@@ -1,14 +1,8 @@
 * sv
-:PROPERTIES:
-:CUSTOM_ID: sv
-:END:
 Everything you need to build a Svelte project, powered by
 [[https://github.com/sveltejs/cli][=sv=]].
 
 ** Creating a project
-:PROPERTIES:
-:CUSTOM_ID: creating-a-project
-:END:
 If you're seeing this, you've probably already done this step. Congrats!
 
 #+begin_src sh
@@ -24,9 +18,6 @@ npx sv@0.15.3 create --template minimal --types ts --add prettier eslint vitest=
 #+end_src
 
 ** Developing
-:PROPERTIES:
-:CUSTOM_ID: developing
-:END:
 Once you've created a project and installed dependencies with
 =npm install= (or =pnpm install= or =yarn=), start a development server:
 
@@ -36,6 +27,12 @@ npm run dev
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
 #+end_src
+
+
+*** Uses icons by [[https://lucide.dev/icons/?search=badge][Lucid]].
+**** TODO Add info on how to add an icon to a .svelte file.
+*** Component library with [[https://storybook.js.org/docs/writing-stories][Storybook]].
+*** Components based on [[https://www.shadcn-svelte.com/docs/][Shadcn for Svelte.]]
 
 ** Building
 :PROPERTIES:
@@ -55,5 +52,3 @@ To deploy your app, you may need to install an
 environment.
 #+end_quote
 
-Uses icons by [[https://lucide.dev/icons/?search=badge][Lucid]].
-*** TODO Add info on how to add an icon to a .svelte file.

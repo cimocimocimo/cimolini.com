@@ -1,9 +1,14 @@
 import type { CollectionConfig } from 'payload'
 
-export const CVEvents: CollectionConfig = {
+export const Events: CollectionConfig = {
   slug: 'cv-events',
+  labels: {
+    singular: 'Event',
+    plural: 'Events',
+  },
   admin: {
     useAsTitle: 'date',
+    group: 'CV',
   },
   access: {
     read: () => true,
