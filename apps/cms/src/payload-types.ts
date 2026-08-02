@@ -72,6 +72,8 @@ export interface Config {
     posts: Post;
     categories: Category;
     'cv-events': CvEvent;
+    'cv-entities': CvEntity;
+    'cv-attributes': CvAttribute;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -84,6 +86,8 @@ export interface Config {
     posts: PostsSelect<false> | PostsSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     'cv-events': CvEventsSelect<false> | CvEventsSelect<true>;
+    'cv-entities': CvEntitiesSelect<false> | CvEntitiesSelect<true>;
+    'cv-attributes': CvAttributesSelect<false> | CvAttributesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -219,6 +223,84 @@ export interface Category {
 export interface CvEvent {
   id: number;
   date: string;
+  /**
+   * Relation to an Entity
+   */
+  entity: number | CvEntity;
+  entityName?: string | null;
+  /**
+   * Relation to an Attribute
+   */
+  attributes?: (number | CvAttribute)[] | null;
+  attributeNames?: string | null;
+  /**
+   * Type of Event. Start or end or single event in time. How the event is described is defined by the related Entity.
+   */
+  eventType: 'start' | 'end' | 'single';
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "cv-entities".
+ */
+export interface CvEntity {
+  id: number;
+  name: string;
+  type: 'project' | 'employer' | 'position' | 'client' | 'school' | 'experience' | 'person';
+  /**
+   * Relationships to other Entities (e.g., student of University, employee of Business)
+   */
+  relations?:
+    | {
+        relatedEntity: number | CvEntity;
+        /**
+         * The type of relationship (e.g., attending, employed by, parent project)
+         */
+        relationType: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Attributes describing this Entity
+   */
+  attributes?: (number | CvAttribute)[] | null;
+  links?:
+    | {
+        text: string;
+        uri: string;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "cv-attributes".
+ */
+export interface CvAttribute {
+  id: number;
+  name: string;
+  type?: ('technology' | 'skill' | 'achievement' | 'metric' | 'general') | null;
+  /**
+   * Content describing the action or entity.
+   */
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -265,6 +347,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'cv-events';
         value: number | CvEvent;
+      } | null)
+    | ({
+        relationTo: 'cv-entities';
+        value: number | CvEntity;
+      } | null)
+    | ({
+        relationTo: 'cv-attributes';
+        value: number | CvAttribute;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -379,6 +469,47 @@ export interface CategoriesSelect<T extends boolean = true> {
  */
 export interface CvEventsSelect<T extends boolean = true> {
   date?: T;
+  entity?: T;
+  entityName?: T;
+  attributes?: T;
+  attributeNames?: T;
+  eventType?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "cv-entities_select".
+ */
+export interface CvEntitiesSelect<T extends boolean = true> {
+  name?: T;
+  type?: T;
+  relations?:
+    | T
+    | {
+        relatedEntity?: T;
+        relationType?: T;
+        id?: T;
+      };
+  attributes?: T;
+  links?:
+    | T
+    | {
+        text?: T;
+        uri?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "cv-attributes_select".
+ */
+export interface CvAttributesSelect<T extends boolean = true> {
+  name?: T;
+  type?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
 }
