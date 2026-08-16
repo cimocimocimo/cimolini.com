@@ -18,6 +18,12 @@ export const Events: CollectionConfig = {
       name: 'date',
       type: 'date',
       required: true,
+      admin: {
+        date: {
+          pickerAppearance: 'monthOnly',
+          displayFormat: 'MMMM yyyy',
+        },
+      },
     },
     {
       name: 'entity',
@@ -38,12 +44,12 @@ export const Events: CollectionConfig = {
         afterRead: [
           ({ data }) => {
             if (data?.entity && typeof data.entity === 'object' && 'name' in data.entity) {
-              return data.entity.name;
+              return data.entity.name
             }
-            return null;
-          }
-        ]
-      }
+            return null
+          },
+        ],
+      },
     },
     {
       name: 'attributes',
@@ -67,12 +73,12 @@ export const Events: CollectionConfig = {
               return data.attributes
                 .map((attr: any) => (typeof attr === 'object' && attr !== null ? attr.name : null))
                 .filter(Boolean)
-                .join(', ');
+                .join(', ')
             }
-            return null;
-          }
-        ]
-      }
+            return null
+          },
+        ],
+      },
     },
     {
       name: 'eventType',
@@ -84,7 +90,8 @@ export const Events: CollectionConfig = {
         { label: 'Point in Time', value: 'single' },
       ],
       admin: {
-        description: 'Type of Event. Start or end or single event in time. How the event is described is defined by the related Entity.',
+        description:
+          'Type of Event. Start or end or single event in time. How the event is described is defined by the related Entity.',
       },
     },
   ],

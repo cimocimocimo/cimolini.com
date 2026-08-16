@@ -1,0 +1,74 @@
+[
+  {
+    "_ref": "attr-skill-whisperer",
+    "name": "Advanced Feline Psychology",
+    "type": "skill",
+    "content": "Mastery of understanding why cats stare at empty corners and the ability to telepathically negotiate treaties with hostile tabbies."
+  },
+  {
+    "_ref": "attr-skill-herding",
+    "name": "Precision Cat Herding",
+    "type": "skill",
+    "content": "Can successfully move a group of 20+ cats in a single direction without the use of tuna."
+  },
+  {
+    "_ref": "attr-tech-laser",
+    "name": "Laser Pointer 2.0 (Pro Edition)",
+    "type": "technology"
+  },
+  {
+    "_ref": "attr-tech-catnip",
+    "name": "Weapons-Grade Catnip Deployment",
+    "type": "technology",
+    "content": "Strategic dispersal of organic catnip for crowd control and behavioral pacification."
+  },
+  {
+    "_ref": "attr-metric-purr",
+    "name": "Purr Volume Output",
+    "type": "metric",
+    "content": "Achieved a record 120 decibels of aggregate purring during the 2012 mass-napping event."
+  },
+  {
+    "_ref": "attr-achieve-treaty",
+    "name": "The Great Dog-Cat Accords of '08",
+    "type": "achievement",
+    "content": "Successfully negotiated a historic ceasefire between neighborhood dogs and the alley cat coalition."
+  },
+  {
+    "_ref": "attr-achieve-wrangler",
+    "name": "Wrangler of the Year",
+    "type": "achievement"
+  },
+  {
+    "_ref": "attr-general-1",
+    "name": "Patience of a Saint",
+    "type": "general",
+    "content": "Demonstrated the ability to sit perfectly still for 6 hours because a cat fell asleep on my lap."
+  },
+  {
+    "_ref": "attr-project-1",
+    "name": "Operation: Midnight Zoomies",
+    "type": "project",
+    "links": [
+      {
+        "text": "Project Report",
+        "uri": "https://example.com/zoomies"
+      }
+    ]
+  },
+  {
+    "_ref": "attr-pos-apprentice",
+    "name": "Apprentice Litter Box Specialist",
+    "type": "position"
+  },
+  {
+    "_ref": "attr-pos-senior",
+    "name": "Chief Feline Officer (CFO)",
+    "type": "position"
+  },
+  {
+    "_ref": "attr-exp-1",
+    "name": "Wrangled 500 Feral Cats",
+    "type": "experience"
+  }
+]

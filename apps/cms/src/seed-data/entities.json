@@ -1,0 +1,36 @@
+[
+  {
+    "_ref": "ent-person-me",
+    "name": "Aaron 'The Whisperer' Cimolini",
+    "type": "person",
+    "attributes": ["attr-skill-whisperer", "attr-general-1"],
+    "links": [
+      {
+        "text": "Personal Portfolio",
+        "uri": "https://cimolini.com"
+      }
+    ]
+  },
+  {
+    "_ref": "ent-school-1",
+    "name": "The Grand Feline Academy of Herding",
+    "type": "school",
+    "links": [
+      {
+        "text": "Academy Website",
+        "uri": "https://example.com/academy"
+      }
+    ]
+  },
+  {
+    "_ref": "ent-employer-1",
+    "name": "Global Cat Herding Conglomerate (GCHC)",
+    "type": "employer"
+  },
+  {
+    "_ref": "ent-client-1",
+    "name": "Mayor of Purrville",
+    "type": "client",
+    "attributes": ["attr-general-1"]
+  }
+]

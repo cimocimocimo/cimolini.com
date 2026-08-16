@@ -24,12 +24,9 @@ export const Entities: CollectionConfig = {
       type: 'select',
       required: true,
       options: [
-        { label: 'Project', value: 'project' },
         { label: 'Employer', value: 'employer' },
-        { label: 'Position', value: 'position' },
         { label: 'Client', value: 'client' },
         { label: 'School/University', value: 'school' },
-        { label: 'Experience', value: 'experience' },
         { label: 'Individual', value: 'person' },
       ],
     },

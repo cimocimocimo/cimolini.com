@@ -247,7 +247,7 @@ export interface CvEvent {
 export interface CvEntity {
   id: number;
   name: string;
-  type: 'project' | 'employer' | 'position' | 'client' | 'school' | 'experience' | 'person';
+  type: 'employer' | 'client' | 'school' | 'person';
   /**
    * Relationships to other Entities (e.g., student of University, employee of Business)
    */
@@ -282,7 +282,7 @@ export interface CvEntity {
 export interface CvAttribute {
   id: number;
   name: string;
-  type?: ('technology' | 'skill' | 'achievement' | 'metric' | 'general') | null;
+  type?: ('technology' | 'skill' | 'achievement' | 'metric' | 'general' | 'experience' | 'project' | 'position') | null;
   /**
    * Content describing the action or entity.
    */
@@ -301,6 +301,13 @@ export interface CvAttribute {
     };
     [k: string]: unknown;
   } | null;
+  links?:
+    | {
+        text: string;
+        uri: string;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -510,6 +517,13 @@ export interface CvAttributesSelect<T extends boolean = true> {
   name?: T;
   type?: T;
   content?: T;
+  links?:
+    | T
+    | {
+        text?: T;
+        uri?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }

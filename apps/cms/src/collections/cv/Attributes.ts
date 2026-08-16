@@ -28,6 +28,9 @@ export const Attributes: CollectionConfig = {
         { label: 'Achievement', value: 'achievement' },
         { label: 'Metric', value: 'metric' },
         { label: 'General', value: 'general' },
+        { label: 'Experience', value: 'experience' },
+        { label: 'Project', value: 'project' },
+        { label: 'Position', value: 'position' },
       ],
     },
     {
@@ -37,5 +40,33 @@ export const Attributes: CollectionConfig = {
         description: 'Content describing the action or entity.',
       },
     },
+    {
+      name: 'links',
+      type: 'array',
+      fields: [
+        {
+          name: 'text',
+          type: 'text',
+          required: true,
+        },
+        {
+          name: 'uri',
+          type: 'text',
+          label: 'URI',
+          required: true,
+          validate: (value) => {
+            if (value) {
+              try {
+                new URL(value); // Basic JS URL validation
+                return true;
+              } catch (error) {
+                return 'Must be a valid URI (e.g., https://example.com)';
+              }
+            }
+            return true;
+          }
+        }
+      ]
+    }
   ],
 }

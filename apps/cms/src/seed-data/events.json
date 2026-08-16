@@ -1,0 +1,69 @@
+[
+  {
+    "_ref": "evt-school-start",
+    "date": "2000-09-01T00:00:00.000Z",
+    "entity": "ent-school-1",
+    "eventType": "start"
+  },
+  {
+    "_ref": "evt-apprentice-start",
+    "date": "2001-01-15T00:00:00.000Z",
+    "entity": "ent-school-1",
+    "eventType": "start",
+    "attributes": ["attr-pos-apprentice", "attr-general-1"]
+  },
+  {
+    "_ref": "evt-apprentice-end",
+    "date": "2004-05-30T00:00:00.000Z",
+    "entity": "ent-school-1",
+    "eventType": "end",
+    "attributes": ["attr-pos-apprentice", "attr-skill-whisperer"]
+  },
+  {
+    "_ref": "evt-school-end",
+    "date": "2004-06-15T00:00:00.000Z",
+    "entity": "ent-school-1",
+    "eventType": "end"
+  },
+  {
+    "_ref": "evt-emp-start",
+    "date": "2004-08-01T00:00:00.000Z",
+    "entity": "ent-employer-1",
+    "eventType": "start"
+  },
+  {
+    "_ref": "evt-pos-senior-start",
+    "date": "2010-10-01T00:00:00.000Z",
+    "entity": "ent-employer-1",
+    "eventType": "start",
+    "attributes": ["attr-pos-senior", "attr-achieve-wrangler"]
+  },
+  {
+    "_ref": "evt-exp-1-gained",
+    "date": "2012-04-12T00:00:00.000Z",
+    "entity": "ent-employer-1",
+    "eventType": "single",
+    "attributes": ["attr-exp-1", "attr-skill-herding", "attr-metric-purr", "attr-tech-catnip"]
+  },
+  {
+    "_ref": "evt-project-start",
+    "date": "2020-03-01T00:00:00.000Z",
+    "entity": "ent-client-1",
+    "eventType": "start",
+    "attributes": ["attr-project-1", "attr-skill-herding", "attr-tech-laser", "attr-achieve-treaty"]
+  },
+  {
+    "_ref": "evt-project-end",
+    "date": "2021-11-15T00:00:00.000Z",
+    "entity": "ent-client-1",
+    "eventType": "end",
+    "attributes": ["attr-project-1", "attr-achieve-treaty"]
+  },
+  {
+    "_ref": "evt-pos-senior-end",
+    "date": "2025-12-31T00:00:00.000Z",
+    "entity": "ent-employer-1",
+    "eventType": "end",
+    "attributes": ["attr-pos-senior"]
+  }
+]
